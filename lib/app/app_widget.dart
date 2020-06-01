@@ -8,14 +8,13 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ValueListenableBuilder<bool>(
       valueListenable: AppController.instance.themeSwitcher,
-      builder: (context, isDark, child) {
+      builder: (context, isDart, child) {
         return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Semana do Flutter',
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            brightness: isDark ? Brightness.dark : Brightness.light,
             visualDensity: VisualDensity.adaptivePlatformDensity,
+            brightness: isDart ? Brightness.dark : Brightness.light,
           ),
           home: HomePage(),
         );
